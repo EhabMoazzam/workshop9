@@ -1,1 +1,27 @@
-<p>product works!</p>
+<div class="col-md-6 container mt-5">
+    <h2 style="margin: auto"> Product Details</h2>
+    <a class="btn btn-success mt-2 mb-2 nav-link" style="width:100px; float: right;" routerLink="/add-product" routerLinkActive="active"> Add User</a>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of products">
+        <td class="hidden">{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price.$numberDecimal}}</td>
+        <td>
+            <button class="btn btn-info" (click)="editProduct(product._id)"> Edit</button>
+            <button class="btn btn-danger" (click)="deleteProduct(product._id)" style="margin-left: 20px;"> Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>

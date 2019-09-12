@@ -7,3 +7,18 @@ module.exports.func = function(req, res){
         res.status(201).json(doc)
     })
 }
+
+module.exports.all = function(req, res){
+    var data = []
+    ProductSchema.find({}, function (err, docs){
+        if(err){
+            res.status(401).json(err);
+        }
+        
+        docs.forEach(function (doc) {
+            data.push(doc)
+        })
+
+        res.status(201).json(data);
+    })
+}

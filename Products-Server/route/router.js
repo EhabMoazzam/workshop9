@@ -11,6 +11,7 @@ var _update = require('./sub_route/update')
 router.post('/add', _add.func)
 router.post('/delete', _remove.func)
 router.post('/read', _read.func)
+router.post('/read_all', _read.all)
 router.post('/update', _update.func)
 
 module.exports = router
