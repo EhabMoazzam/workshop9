@@ -1,1 +1,14 @@
-<p>edit-product works!</p>
+<div class="col-md-9 container mt-5">
+    <h2 style="margin: auto"> Product Add</h2>
+    <hr>
+
+    <div class="form-group">
+        <div class="form-control p-2" style="height: 60px;">
+            ID : <input type="text" [(ngModel)]="id"/>
+            Name : <input type="text" [(ngModel)]="name"/>
+            Description : <input type="text" [(ngModel)]="description"/>
+            Price : <input type="number" step='0.01' value='0.00' placeholder='0.00' [(ngModel)]="price"/>
+        </div>
+    </div>
+    <a class="btn btn-success mt-2 mb-2 nav-link" style="width:100px; float: right;" (click)="editProduct(id, name, description, price)">Edit Product</a>
+</div>

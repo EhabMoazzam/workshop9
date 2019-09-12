@@ -28,13 +28,21 @@ export class ProductComponent implements OnInit {
   deleteProduct(_id){
     var r = confirm("Are you sure delete this item?");
     if (r == true) {
-      alert(_id)
+      const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+
+      var data = "_id=" + _id
+
+      this.http.post('http://localhost:3000/product/delete', data , {
+        headers: headers
+      }).subscribe((data : any) => {
+        window.location.reload(false);
+      })
     }
     
   }
 
   editProduct(_id){
-    alert(_id)
+    this._router.navigate(['/edit-product', _id])
   }
 
 }
