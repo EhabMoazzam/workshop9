@@ -1,0 +1,24 @@
+{ 
+    "_id" : ObjectId("5d7a4a3cf0deba42886f6314"), 
+    "id" : NumberInt(1), 
+    "name" : "GGP", 
+    "description" : "GGG 123", 
+    "price" : NumberDecimal("5.22"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5d7a4a78f0deba42886f6315"), 
+    "id" : NumberInt(3), 
+    "name" : "AKG", 
+    "description" : "AKG is what??", 
+    "price" : NumberDecimal("4.22"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5d7a4a90f0deba42886f6316"), 
+    "id" : NumberInt(5), 
+    "name" : "WKW", 
+    "description" : "test test test", 
+    "price" : NumberDecimal("1.11"), 
+    "__v" : NumberInt(0)
+}
